@@ -1,0 +1,33 @@
+.center {
+  margin: 0 auto;
+}
+.floor {
+  width: 1200px;
+  margin: 0 auto;
+}
+.floor .slider {
+  margin-left: 240px;
+  position: relative;
+}
+.floor .slider .slider-mod {
+  bottom: 0;
+  height: 30px;
+  left: 0;
+  padding-left: 10px;
+  position: absolute;
+  text-align: left;
+  width: 98%;
+  z-index: 87;
+}
+.notice_main {
+  width: 100%;
+  padding: 10px;
+}
+.notice_main li {
+  line-height: 30px;
+  background: url(../images/news_li01.gif) no-repeat left center;
+  padding-left: 15px;
+}
+.sale {
+  margin-top: 20px;
+}
