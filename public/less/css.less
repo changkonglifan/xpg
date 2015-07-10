@@ -1,0 +1,226 @@
+@mainWidth:1200px;//主宽度
+@mainColor:#af0000;//主颜色
+@hoverColor:#CC0D0D;//高亮颜色
+@mainFontColor:#404040;//主字体颜色
+@hoverFontColor:#cc0000;
+html,body{  
+	background: #fff;
+  	font-size: 12px;
+  	font-family: "微软雅黑";
+  	margin: 0;
+  	padding: 0;
+  	color: @mainFontColor;
+}
+a{color:@mainFontColor;text-decoration: none;}
+a:hover{color:@hoverFontColor;}
+//按钮样式
+.btn{
+	display:block;
+	height:30px;
+	width:100px;
+	background-color: @mainColor;
+	border:none;
+	outline:1px solid @mainColor;
+	font-size: 18px;
+	color:#fff;
+	cursor: pointer;
+	font-weight: 700;
+}
+.btn:hover{
+	background-color: @hoverColor;
+}
+//浮动
+.l{float:left;}.r{float:right;}
+
+// 浮动闭合
+.cl{
+	clear:both;
+	height: 0;
+	margin: 0;
+	padding:0;
+	overflow: hidden;
+}
+//层级
+.z1{z-index: 1;}.z2{z-index: 2;}.z3{z-index: 3;}.z4{z-index: 4;}
+.clearFix:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.center{margin:0 auto;}
+// 迷你导航
+.mini_head{
+	width: 100%;
+	background:url(../images/top_nav.gif) repeat-x; 
+	height:28px;
+	line-height: 28px;
+	.contain{
+		width:@mainWidth;
+		.center;
+		color:#e0e0e0;
+		span{color:@mainFontColor;}
+		.login_reg a{
+			color:#0065cb;
+			margin-left: 10px;
+		}
+		.login_reg a:hover{
+			color:@hoverFontColor;
+		}
+		.account{
+			position: relative;
+			display: inline-block;
+			padding-right: 20px;
+			margin-left: 10px;
+			background: url(../images/sanjiao.png) no-repeat;
+			background-position: right -22px;
+			ul{
+				position:absolute;
+				left:-1px;
+				top:28px;
+				background-color: #ffffff;
+				border:1px solid #ccc;
+				border-top: none;
+				width:68px;
+				padding:3px;
+				color:@mainFontColor;
+				display:none;
+				li{
+					line-height: 30px;
+					border-bottom: 1px dotted #ccc;
+					text-align: center;
+				}
+				li:last-child{
+					border-bottom: none;
+				}
+			}
+		}
+		.account:hover{
+			background-position: right 3px;
+		}
+		.menu{
+			display:inline-block;
+		}
+	}
+}
+//头部信息
+.header_top{
+	width:@mainWidth;
+	.center;
+	height:95px;
+	line-height: 74px;
+	position:relative;
+	.logo{display:inline-block;position:absolute;left:0;top:10px;}
+	.search{
+		display:block;
+		width:400px;
+		.center;
+		.input_box{
+			float:left;
+			width:260px;
+			height:33px;
+			line-height: 33px;
+			padding-left: 30px;
+			margin-top: 20px;
+			border:2px solid @mainColor;
+			background: url("../images/search.png") no-repeat 5px center;
+			input{width:100%;height:32px;border:none;outline: none;}
+		}
+		.seach_btn{
+			float:left;
+			height:35px;
+			margin-top: 21px;
+		}
+	}
+}
+// 导航栏
+.nav{
+	height:36px;
+	width:100%;
+	background-color: @mainColor;
+	.main_nav{
+		width:@mainWidth;
+		.center;
+	}
+	.all_goods{
+		width:210px;
+		position:relative;
+		line-height: 36px;
+		padding-left: 20px;
+		.l;
+		a{
+			font-size: 14px;
+			color:#ffffff;font-weight: bold;
+		}
+		ul{
+			position:absolute;
+			left:-1px;
+			background-color: #ffffff;
+			border:2px solid @mainColor;
+			border-top: none;
+			width:226px;
+			height:450px;
+			top:36px;
+			display:none;
+			.z4;
+			li{
+				padding-left: 10px;
+				line-height: 30px;
+				border-bottom: 1px solid #ccc;
+				background-color: #FEFDF6; 
+				cursor:pointer;
+				a{
+					color:@mainFontColor;
+					font-weight: normal;
+				}
+				span{float:right;margin-right: 10px;color:@mainColor;}
+			}
+			li:hover{
+				width:218px;
+				background-color: #fff;
+				span{color:#fff;}
+			}
+		}
+	}
+	// 选中状态
+	.on{
+		background-color: @hoverColor;
+		ul{
+			display:block;
+		}
+	}
+	.items{
+		a{
+			display:inline-block;
+			text-align: center;
+			width:120px;
+			line-height: 36px;
+			color:#ffffff;
+			font-weight: 700;
+		}
+		span{
+			display:inline-block;
+			width:3px;
+			height:36px;
+			color:#D96A6A;
+		}
+		a:hover,a.on{
+			background-color:@hoverColor;
+		}
+	}
+}
+.panel{
+	width:245px;
+	border:1px solid #f0eeef;
+	p{
+		height:30px;
+		padding-left: 20px;
+		line-height: 30px;
+		background-color: #f0eeef;
+	}
+	.main{
+		background-color: #ffffff;
+		
+	}
+}
