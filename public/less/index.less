@@ -3,7 +3,15 @@
 @hoverColor:#CC0D0D;//高亮颜色
 @mainFontColor:#404040;//主字体颜色
 @hoverFontColor:#cc0000;
+@rightWidth:245px;
+
 .center{margin: 0 auto;}
+// 文字超长了之后用省略号隐藏
+.txtEllipsis{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 .floor{
 	width:@mainWidth;
 	.center;
@@ -30,8 +38,131 @@
 		line-height: 30px;
 		background: url(../images/news_li01.gif) no-repeat left center;
 		padding-left:15px; 
+		
 	}
 }
 .sale{
 	margin-top: 20px;
+}
+.index_tab {
+	margin-top: 10px;
+	width:948px;
+	border:1px solid #bbbbbb;
+	height:324px;
+}
+.head_tab{
+	height:30px;line-height: 30px;
+	ul{
+		width:100%;
+		height:100%;
+		margin: 0;
+		padding:0;
+		li{
+			float: left;width:236px;
+			text-align: center;
+			background-color: #f0eeef;
+			border-bottom: 1px solid #bbbbbb;
+			border-right:1px solid #bbbbbb;
+		}
+		li:last-child{border-right: none;width:237px;}
+		li.on{border-bottom: none;background-color: #ffffff;}
+	}
+}
+.head_tab_a{display: inline-block;width:100%;color: @mainFontColor;font-size: 14px;font-weight: bold;}
+.contain_tab{
+	width:100%;
+	height:auto;
+}
+.items{
+	width:180px;
+	padding:2px;
+	float:left;
+}
+.goods{
+	width:100%;
+	height:180px;
+	padding:8px;
+	text-align: center;
+	display:block;
+}
+.name{
+	.txtEllipsis;
+	padding-left:20px;
+	padding-right: 10px;
+}
+.price{
+	padding-left: 20px;
+	padding-right: 10px;
+	margin-top: 10px;
+	.price_now{
+		color:red;
+	}
+	.price_old{
+		margin-left: 10px;
+		color:#666;
+	  	text-decoration: line-through;
+	}
+}
+.hotSale{
+	margin-top:  10px;
+}
+// 信息展示  左图右信息
+.pic_info{
+	li{
+		background-color: #f0f0f0;
+		margin: 10px 0;
+		padding: 3px; 
+	}
+	.pic{
+		display:block;
+		width:60px;
+		height:55px;
+		float:left;
+		
+	}
+	.info{
+		float:left;
+		padding-top: 10px;
+		padding-left: 20px;
+		line-height: 20px;
+	}
+	.price{
+		color:red;
+		font-weight: bold;
+	}
+	.name{
+		color:@mainFontColor;
+		font-size: 12px;
+	}
+}
+// 信息分类展示
+.classify{
+	margin-top: 10px;
+	height:300px;
+	.header{
+		width:100%;
+		line-height: 25px;
+		border-bottom: 3px solid @mainColor;
+		a{font-size: 18px;}
+	}
+	.container{
+		margin-top: 5px;
+		width:100%;
+		>div{float:left;}
+		>div:last-child{float:right;}
+		.acitvy{
+			display:block;
+			width:200px;
+			height:240px;
+			float:left;
+		}
+	}
+	.other_activy{
+		width:@rightWidth;
+		.other_activy_items{
+			display:block;
+			height:70px;
+			margin-top: 10px;
+		}
+	}
 }

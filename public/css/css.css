@@ -54,6 +54,21 @@ a:hover {
 .z4 {
   z-index: 4;
 }
+.mg0 {
+  margin: 0;
+}
+.mg {
+  margin: 10px;
+}
+.mt0 {
+  margin-top: 0px;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
 .clearFix:after {
   content: ".";
   display: block;
@@ -220,7 +235,7 @@ a:hover {
 .nav .on ul {
   display: block;
 }
-.nav .items a {
+.nav .items_nav a {
   display: inline-block;
   text-align: center;
   width: 120px;
@@ -228,26 +243,46 @@ a:hover {
   color: #ffffff;
   font-weight: 700;
 }
-.nav .items span {
+.nav .items_nav span {
   display: inline-block;
   width: 3px;
   height: 36px;
   color: #D96A6A;
 }
-.nav .items a:hover,
-.nav .items a.on {
+.nav .items_nav a:hover,
+.nav .items_nav a.on {
   background-color: #cc0d0d;
 }
 .panel {
   width: 245px;
-  border: 1px solid #f0eeef;
+  border: 1px solid #af0000;
 }
-.panel p {
+.panel > p {
+  font-weight: bold;
   height: 30px;
   padding-left: 20px;
   line-height: 30px;
-  background-color: #f0eeef;
+  background-color: #af0000;
+  color: #ffffff;
 }
 .panel .main {
   background-color: #ffffff;
+}
+.footer {
+  width: 1200px;
+  margin: 0 auto;
+}
+.footer dl {
+  float: left;
+  border-right: 1px solid #333;
+  padding-left: 30px;
+}
+.footer dt,
+.footer dd {
+  width: 100%;
+  line-height: 30px;
+}
+.footer a {
+  display: inline-block;
+  width: 100%;
 }

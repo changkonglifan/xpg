@@ -3,6 +3,7 @@
 @hoverColor:#CC0D0D;//高亮颜色
 @mainFontColor:#404040;//主字体颜色
 @hoverFontColor:#cc0000;
+@rightWidth:245px;
 html,body{  
 	background: #fff;
   	font-size: 12px;
@@ -42,6 +43,8 @@ a:hover{color:@hoverFontColor;}
 }
 //层级
 .z1{z-index: 1;}.z2{z-index: 2;}.z3{z-index: 3;}.z4{z-index: 4;}
+.mg0{margin: 0;}.mg{margin:10px;}
+.mt0{margin-top: 0px;}.mt10{margin-top: 10px;}.mt20{margin-top: 20px;}
 .clearFix:after{
 	content: ".";
 	display: block;
@@ -190,7 +193,7 @@ a:hover{color:@hoverFontColor;}
 			display:block;
 		}
 	}
-	.items{
+	.items_nav{
 		a{
 			display:inline-block;
 			text-align: center;
@@ -211,16 +214,37 @@ a:hover{color:@hoverFontColor;}
 	}
 }
 .panel{
-	width:245px;
-	border:1px solid #f0eeef;
-	p{
+	width:@rightWidth;
+	border:1px solid @mainColor;
+	>p{
+		font-weight: bold;
 		height:30px;
 		padding-left: 20px;
 		line-height: 30px;
-		background-color: #f0eeef;
+		background-color: @mainColor;
+		color:#ffffff;
 	}
 	.main{
 		background-color: #ffffff;
 		
+	}
+}
+// 尾部
+.footer{
+	width:@mainWidth;
+	.center;
+	dl{
+		float:left;
+		border-right: 1px solid #333;
+		padding-left: 30px;
+	}
+	dt,dd{
+		width:100%;
+		line-height: 30px;
+	}
+	a{
+		display:inline-block;
+		width:100%;
+
 	}
 }
