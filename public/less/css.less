@@ -231,23 +231,40 @@ a:hover{color:@hoverFontColor;}
 }
 // 尾部
 .footer{
-	width:@mainWidth;
+	background-color: #eeeeee;
 	.center;
 	.footer_container{
-		padding: 10px;
+		width: @mainWidth;
+		.center;
+		padding: 20px;
+		height: 174px;
 	}
 	dl{
 		float:left;
-		border-right: 1px solid #333;
+		background: url(../images/footer_dlbg.gif) repeat-y right top;
 		padding-left: 30px;
+		width:17%;
+		height: 134px;
+	}
+	dl:last-child{
+		background:none;
 	}
 	dt,dd{
 		width:100%;
 		line-height: 30px;
 	}
-	a{
-		display:inline-block;
-		width:100%;
-
+	dt a{
+		font-size: 18px;
+		color:#666666;
+		font-weight: bold;
+		display: block;
+	}
+	dd a{
+		font-size: 12px;
+		list-style-type: none;
+		color: #989898;
+		text-decoration: none;
+		display: block;
+		text-indent: 20px;
 	}
 }
