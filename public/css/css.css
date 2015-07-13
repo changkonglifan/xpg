@@ -272,6 +272,9 @@ a:hover {
   width: 1200px;
   margin: 0 auto;
 }
+.footer .footer_container {
+  padding: 10px;
+}
 .footer dl {
   float: left;
   border-right: 1px solid #333;

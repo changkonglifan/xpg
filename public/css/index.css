@@ -6,6 +6,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.center {
+  margin: 0 auto;
+}
 .floor {
   width: 1200px;
   margin: 0 auto;
