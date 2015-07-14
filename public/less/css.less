@@ -45,6 +45,8 @@ a:hover{color:@hoverFontColor;}
 .z1{z-index: 1;}.z2{z-index: 2;}.z3{z-index: 3;}.z4{z-index: 4;}
 .mg0{margin: 0;}.mg{margin:10px;}
 .mt0{margin-top: 0px;}.mt10{margin-top: 10px;}.mt20{margin-top: 20px;}
+.colred{color:red;}
+.fb{font-weight: bold;}
 .clearFix:after{
 	content: ".";
 	display: block;
@@ -161,9 +163,9 @@ a:hover{color:@hoverFontColor;}
 			left:-1px;
 			background-color: #ffffff;
 			border:2px solid @mainColor;
-			border-top: none;
+			border-top: none: ;
 			width:226px;
-			height:450px;
+			height:430px;
 			top:36px;
 			display:none;
 			.z4;
@@ -230,11 +232,14 @@ a:hover{color:@hoverFontColor;}
 	}
 }
 // 尾部
-.footer{
-	width:@mainWidth;
-	.center;
+.footer_header{
+	width:100%;
+	height:164px;
+	background-color: #eeeeee;
 	.footer_container{
 		padding: 10px;
+		width:@mainWidth;
+		.center;
 	}
 	dl{
 		float:left;
@@ -251,7 +256,7 @@ a:hover{color:@hoverFontColor;}
 		line-height: 30px;
 	}
 	dt a{
-		font-size: 18px;
+		font-size: 16px;
 		color:#666666;
 		font-weight: bold;
 		display: block;
@@ -264,4 +269,19 @@ a:hover{color:@hoverFontColor;}
 		display: block;
 		text-indent: 20px;
 	}
+}
+.copyright{
+	width:@mainWidth;
+	.center;
+	text-align: center;
+	margin-bottom: 20px;
+	position: relative;
+	p{
+		line-height: 30px;
+	}
+}
+.wxlog{
+	position: absolute;
+	right:100px;
+	top:0;
 }
