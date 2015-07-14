@@ -231,22 +231,19 @@ a:hover{color:@hoverFontColor;}
 }
 // 尾部
 .footer{
-	background-color: #eeeeee;
+	width:@mainWidth;
 	.center;
 	.footer_container{
-		width: @mainWidth;
-		.center;
-		padding: 20px;
-		height: 174px;
+		padding: 10px;
 	}
 	dl{
 		float:left;
-		background: url(../images/footer_dlbg.gif) repeat-y right top;
+		background: url(../images/footer_dlbg.gif) repeat-y left top;
 		padding-left: 30px;
 		width:17%;
 		height: 134px;
 	}
-	dl:last-child{
+	dl:first-child{
 		background:none;
 	}
 	dt,dd{
