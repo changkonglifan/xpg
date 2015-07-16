@@ -5,24 +5,36 @@
 var data = require("./../models/index.js")
 exports.index = function(req, res){
 	//商城公告
+	var noticeData = {
+		hasGet:false,
+		data:[]
+	};
+	var bztj = {
+		hasGet:false,
+		data:[]
+	};
 	var getNotice = function(){
 		//获取前五条
 		data.getTop5Activy(dataBack);
 	}();
+	var 
 	function dataBack(err,rows){
 		if(err){
-
+			noticeData.hasGet=true;
+			noticeData.data = [];
+			console.log("get data error ;info:"+err);
 		}
 		else{		
-			console.log(rows);
-			res.render('index.ejs', { 
-		  		title: '小苹果零食坊-小苹果零食' ,
-		  		noticeData:rows,
-		  		bztj : bztj()
-			});
+			
 		}
 	}
-  	
+  	function render(){
+  		res.render('index.ejs', { 
+	  		title: '小苹果零食坊-小苹果零食' ,
+	  		noticeData:rows,
+	  		bztj : bztj()
+		});
+  	}
 };
 
 
