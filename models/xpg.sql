@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2015-07-15 17:57:34
+Date: 2015-07-16 18:07:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,6 +32,24 @@ CREATE TABLE `activy` (
 
 -- ----------------------------
 -- Records of activy
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `bargain`
+-- ----------------------------
+DROP TABLE IF EXISTS `bargain`;
+CREATE TABLE `bargain` (
+  `id` int(2) NOT NULL AUTO_INCREMENT,
+  `productId` int(2) NOT NULL,
+  `bargainPrice` decimal(2,0) DEFAULT NULL COMMENT '活动特价',
+  `startTime` datetime(2) DEFAULT NULL,
+  `endTime` datetime(2) DEFAULT NULL,
+  `createTime` datetime(2) DEFAULT NULL COMMENT '创建时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of bargain
 -- ----------------------------
 
 -- ----------------------------
