@@ -14,6 +14,7 @@ exports.index = function(req, res){
 
 		}
 		else{		
+			console.log(rows);
 			res.render('index.ejs', { 
 		  		title: '小苹果零食坊-小苹果零食' ,
 		  		noticeData:rows,
