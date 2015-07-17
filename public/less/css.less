@@ -1,9 +1,4 @@
-@mainWidth:1200px;//主宽度
-@mainColor:#af0000;//主颜色
-@hoverColor:#CC0D0D;//高亮颜色
-@mainFontColor:#404040;//主字体颜色
-@hoverFontColor:#cc0000;
-@rightWidth:245px;
+@import url(variable.less);
 html,body{  
 	background: #fff;
   	font-size: 12px;
@@ -284,4 +279,12 @@ a:hover{color:@hoverFontColor;}
 	position: absolute;
 	right:100px;
 	top:0;
+}
+
+.bread{
+	line-height: 30px;
+	width:100%;
+	.nav{
+		background: none;
+	}
 }

@@ -17,7 +17,10 @@ exports.index = function(req, res){
 		//获取前五条
 		data.getTop5Activy(dataBack);
 	}();
-	var 
+	var getBztjData = function(){
+		data.getBztjData(bztjDataBack)
+	}();
+	//获取信息通知数据返回
 	function dataBack(err,rows){
 		if(err){
 			noticeData.hasGet=true;
@@ -25,14 +28,35 @@ exports.index = function(req, res){
 			console.log("get data error ;info:"+err);
 		}
 		else{		
-			
+			noticeData.hasGet = true;
+			noticeData.data = rows;
+		}
+		if(bztj.hasGet){
+			render();
 		}
 	}
+	//获取本周特价数据返回
+	function bztjDataBack(err,rows){
+		if(err){
+			bztj.hasGet = true;
+			bztj.data = [];
+			console.log("get data error;info:"+err);
+		}
+		else {
+			bztj.hasGet = true;
+			bztj.data = rows;
+		}
+		if(noticeData.hasGet){
+			render();
+		}
+	}
+
   	function render(){
   		res.render('index.ejs', { 
 	  		title: '小苹果零食坊-小苹果零食' ,
-	  		noticeData:rows,
-	  		bztj : bztj()
+	  		noticeData:noticeData.data,
+	  		bztj : bztj.data,
+	  		all_goods:"on"
 		});
   	}
 };
