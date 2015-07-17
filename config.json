@@ -3,5 +3,5 @@
 	"port":3306,
 	"database":"xpg",
 	"user":"root",
-	"password":"root"
+	"password":""
 }

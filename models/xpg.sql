@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
-Source Server Version : 50624
+Source Server         : localhost_3306
+Source Server Version : 50617
 Source Host           : localhost:3306
 Source Database       : xpg
 
 Target Server Type    : MYSQL
-Target Server Version : 50624
+Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2015-07-16 18:07:25
+Date: 2015-07-17 17:36:29
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -45,12 +45,18 @@ CREATE TABLE `bargain` (
   `startTime` datetime(2) DEFAULT NULL,
   `endTime` datetime(2) DEFAULT NULL,
   `createTime` datetime(2) DEFAULT NULL COMMENT '创建时间',
+  `content` text COMMENT '活动说明',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of bargain
 -- ----------------------------
+INSERT INTO `bargain` VALUES ('1', '1', '3', '2015-07-17 10:32:54.00', '2015-07-23 10:32:58.00', '2015-07-17 10:33:02.00', 'asdf阿什顿特');
+INSERT INTO `bargain` VALUES ('2', '3', '3', '2015-07-17 10:34:23.00', '2015-07-29 10:34:27.00', '2015-07-17 10:34:31.00', 'adf阿斯蒂芬');
+INSERT INTO `bargain` VALUES ('3', '4', '6', '2015-07-17 10:34:43.00', '2015-07-31 10:34:46.00', '2015-07-17 10:34:49.00', '阿斯蒂芬放的');
+INSERT INTO `bargain` VALUES ('4', '5', '4', '2015-07-17 10:35:13.00', '2015-07-31 10:35:16.00', '2015-07-17 10:35:20.00', '打');
+INSERT INTO `bargain` VALUES ('5', '2', '1', '2015-07-17 10:35:28.00', '2015-07-30 10:35:31.00', '2015-07-17 10:35:35.00', '地方阿凡达地方');
 
 -- ----------------------------
 -- Table structure for `notice`
@@ -94,12 +100,19 @@ CREATE TABLE `product` (
   `priceIn` decimal(2,0) DEFAULT NULL COMMENT '进货价',
   `priceOut` decimal(2,0) DEFAULT NULL COMMENT '售价',
   `mark` varchar(500) DEFAULT NULL COMMENT '说明',
+  `onSale` int(1) NOT NULL DEFAULT '0',
+  `saleCount` int(3) DEFAULT '0',
   PRIMARY KEY (`id`,`productId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of product
 -- ----------------------------
+INSERT INTO `product` VALUES ('1', '1', '湘康锅底香锅巴', '', '', '福建旭阳食品公司', '福建福州', '1', '4', '锅底香锅巴', '0', '0');
+INSERT INTO `product` VALUES ('2', '2', '多尔好爆香鱿鱼28g', '', '', '福建旭阳食品公司', '福建福州', '1', '4', '多尔好爆香鱿鱼28g', '0', '0');
+INSERT INTO `product` VALUES ('3', '3', '恰恰怪味豆130g', '', '', '福建旭阳食品公司', '福建福州', '1', '4', '恰恰怪味豆', '0', '0');
+INSERT INTO `product` VALUES ('4', '4', '有友泡椒花生', '', '', '福建旭阳食品公司', '福建福州', '1', '4', '有友泡椒花生', '0', '0');
+INSERT INTO `product` VALUES ('5', '5', '平飞卤味鸡爪', '', '', '福建旭阳食品公司', '福建福州', '1', '4', '平飞卤味鸡爪', '0', '0');
 
 -- ----------------------------
 -- Table structure for `user`
