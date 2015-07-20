@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2015-07-17 17:36:29
+Date: 2015-07-20 18:05:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -139,12 +139,15 @@ DROP TABLE IF EXISTS `vip`;
 CREATE TABLE `vip` (
   `cardID` varchar(12) NOT NULL,
   `regTime` datetime(6) NOT NULL COMMENT '注册时间',
-  `count` int(10) NOT NULL DEFAULT '0' COMMENT '积分',
+  `scord` int(10) NOT NULL DEFAULT '0' COMMENT '积分',
   `userName` varchar(20) NOT NULL COMMENT '用户名',
   `password` varchar(100) NOT NULL,
-  `header` varchar(100) DEFAULT NULL COMMENT '头像地址'
+  `header` varchar(100) DEFAULT NULL COMMENT '头像地址',
+  `email` varchar(50) NOT NULL COMMENT '注册邮箱',
+  PRIMARY KEY (`cardID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of vip
 -- ----------------------------
+INSERT INTO `vip` VALUES ('0001', '2015-07-20 18:02:35.000000', '0', 'admin', 'xuyanglifan', null, '897103652@qq.com');
