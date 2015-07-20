@@ -9,6 +9,7 @@ html,body{
 }
 a{color:@mainFontColor;text-decoration: none;}
 a:hover{color:@hoverFontColor;}
+.ftx04{font-style: normal;color:#ff0000;}
 //按钮样式
 .btn{
 	display:block;
@@ -280,11 +281,49 @@ a:hover{color:@hoverFontColor;}
 	right:100px;
 	top:0;
 }
-
+//面包屑导航
 .bread{
 	line-height: 30px;
 	width:100%;
+	clear: both;
 	.nav{
 		background: none;
+	}
+}
+
+//表单列
+.pron{
+	width: @mainWidth;
+	margin: 0 auto;
+}
+.form_item{
+	width:100%;
+	line-height: 38px;
+	clear: both;
+	margin: 15px 0;
+	.label{
+		width: 300px;
+		text-align: right;
+		float: left;
+		font-size: 14px;
+		color:#999;
+		margin-right: 15px;
+	}
+	.item_info{
+		width: 300px;
+		border:1px solid #999;
+		background: url(../images/user/one4.jpg) no-repeat 280px center;
+		padding-right: 10px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.txt{
+		outline: none;
+		height: 26px;
+		width: 260px;
+		border: none;	
+		margin:0;	
+		display: block;
+		text-indent: 10px;
 	}
 }
