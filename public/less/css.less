@@ -290,19 +290,20 @@ a:hover{color:@hoverFontColor;}
 		background: none;
 	}
 }
-
-//表单列
+// 内容框
 .pron{
 	width: @mainWidth;
 	margin: 0 auto;
+	border:1px solid #ccc;
 }
+// 表单列
 .form_item{
 	width:100%;
 	line-height: 38px;
 	clear: both;
 	margin: 15px 0;
 	.label{
-		width: 300px;
+		width: 200px;
 		text-align: right;
 		float: left;
 		font-size: 14px;
@@ -310,12 +311,15 @@ a:hover{color:@hoverFontColor;}
 		margin-right: 15px;
 	}
 	.item_info{
+		position: relative;
 		width: 300px;
 		border:1px solid #999;
-		background: url(../images/user/one4.jpg) no-repeat 280px center;
 		padding-right: 10px;
 		padding-top: 5px;
 		padding-bottom: 5px;
+	}
+	.item_info.on{
+		border:1px solid #f00;
 	}
 	.txt{
 		outline: none;
@@ -326,4 +330,69 @@ a:hover{color:@hoverFontColor;}
 		display: block;
 		text-indent: 10px;
 	}
+	.autoCode{
+		width:180px;
+		background-position: 160px center;
+		.txt{
+			width:160px;
+		}
+	}
+	i{
+		position: absolute;
+		height: 20px;
+		top: 9px;
+		width: 16px;
+		background:url(../images/user/u_register.png) no-repeat;
+		right:8px;
+	}
+	.i_user{
+		background-position: right -10px;
+	}
+	.i_psw{
+		background-position: right -40px;
+	}
+	.i_autoCode{
+		background:none;
+	}
+	.i_email{
+		background:none;
+	}
+	.i_suc{
+		background-position: right -70px;
+	}
+}
+.zcxy{
+	padding-left:210px;
+	width:100%;
+	a{
+		color:blue;
+	}
+}
+.commit{
+	width:100%;
+	margin-top: 30px;
+	padding-left: 210px;
+	margin-bottom: 30px;
+	.btn{
+		text-align: center;
+		width:300px;
+		border:none;
+		outline:none;
+		border-radius: 3px;
+	}
+	.btn:hover{
+		color:white;
+	}
+}
+.error{
+	color: #e4393c;
+	line-height: 36px;
+	height: 36px;
+	position: absolute;
+	margin-left: 15px;
+	width: 260px;
+	padding: 0 5px;
+	background: #FFEBEB;
+	border: 1px solid #ffbdbe;
+	display:none;
 }

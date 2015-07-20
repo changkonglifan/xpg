@@ -11,7 +11,7 @@
 		</div>
 	</div>
 	<div class="pron">
-		<form action="./register">
+		<form action="./register" method="post">	
 			<div class="form_item clearFix">
 				<span class="label">
 					<b class="ftx04">*</b>
@@ -19,7 +19,9 @@
 				</span>
 				<div class="l item_info">
 					<input id="userName" name="userName" tabindex="1" autocomplete="off" type="text" class="txt">
+					<i class="i_user"></i>
 				</div>
+				<span class="error"></span>
 			</div>
 			<div class="form_item clearFix">
 				<span class="label">
@@ -27,8 +29,10 @@
 					请输入密码:
 				</span>
 				<div class="l item_info">
-					<input id="psw" name="psw" tabindex="2" autocomplete="off" type="text" class="txt">
+					<input id="psw" name="psw" tabindex="2" autocomplete="off" type="password" class="txt">
+					<i class="i_psw"></i>
 				</div>
+				<span class="error"></span>
 			</div>
 			<div class="form_item clearFix">
 				<span class="label">
@@ -36,8 +40,10 @@
 					请再次输入密码:
 				</span>
 				<div class="l item_info">
-					<input id="confirmPsw" name="confirmPsw" tabindex="3" autocomplete="off" type="text" class="txt">
+					<input id="confirmPsw" name="confirmPsw" tabindex="3" autocomplete="off" type="password" class="txt">
+					<i class="i_psw"></i>
 				</div>
+				<span class="error"></span>
 			</div>
 			<div class="form_item clearFix">
 				<span class="label">
@@ -45,19 +51,31 @@
 					电子邮件:
 				</span>
 				<div class="l item_info">
-					<input id="email" name="email" taxindex="4" autocomplete="off" type="text" class="txt">
+					<input id="email" name="email" tabindex="4" autocomplete="off" type="text" class="txt">
+					<i class="i_email"></i>
 				</div>
+				<span class="error"></span>
 			</div>
 			<div class="form_item clearFix">
 				<span class="label">
 					<b class="ftx04">*</b>
 					验证码:
 				</span>
-				<div class="l item_info">
-					<input id="autocode" name="autocode" taxindex="5" autocomplete="off" type="text" class="txt">
-
+				<div class="l item_info ">
+					<input id="autocode" name="autocode" tabindex="5" autocomplete="off" type="text" class="txt">
+					<i class="i_autoCode"></i>
 				</div>
+				<span class="error"></span>
 			</div>
+			<!-- 注册协议 -->
+			<div class="l zcxy clearFix">
+				<input type="checkbox" name="zxxy" tabindex="6">我已阅读并同意<a href="#">《注册协议》</a>
+				<div class="cl"></div>
+			</div>
+			<div class="l commit">
+				<input id="reg_submit" class="btn" name="submit" value="立即注册" type="submit" tabindex="7">
+			</div>
+			<div class="cl"></div>
 		</form>
 	</div>
 </div>
@@ -65,4 +83,5 @@
 
 
 <script type="text/javascript" src="js/user.js"></script>
+<% include ../public/footer_bottom.html%>
 <% include ../public/footer.html%>
